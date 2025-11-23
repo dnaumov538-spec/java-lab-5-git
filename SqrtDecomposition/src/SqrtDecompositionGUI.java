@@ -47,10 +47,18 @@ public class SqrtDecompositionGUI {
         gbc.gridy = 1;
         frame.add(sumButton, gbc);
 
-        JButton sumButton2 = new JButton("Другая простая кнопка");
+
+
+        JButton sumButton2 = new JButton("Просто кнопка1");
         gbc.gridwidth = 2;
         gbc.gridx = 0;
         gbc.gridy = 2;
+        frame.add(sumButton, gbc);
+        
+        JButton sumButton3 = new JButton("Просто кнопка2");
+        gbc.gridwidth = 3;
+        gbc.gridx = 0;
+        gbc.gridy = 3;
         frame.add(sumButton, gbc);
         
         // Поля ввода для интервала для суммы
