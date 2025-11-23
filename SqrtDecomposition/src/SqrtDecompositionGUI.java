@@ -47,6 +47,12 @@ public class SqrtDecompositionGUI {
         gbc.gridy = 1;
         frame.add(sumButton, gbc);
 
+        JButton sumButton2 = new JButton("Вычислить сумму на интервале");
+        gbc.gridwidth = 2;
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        frame.add(sumButton, gbc);
+        
         // Поля ввода для интервала для суммы
         JTextField sumStartField = new JTextField(5);
         JTextField sumEndField = new JTextField(5);
