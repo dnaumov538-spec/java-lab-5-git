@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SqrtDecompositionProject" default="jar" basedir=".">
+
+    <!-- Определение свойств -->
+    <property name="src.dir"     value="."/> <!-- Указываем текущую директорию как источник исходного кода -->
+    <property name="build.dir"   value="build/"/>
+    <property name="classes.dir" value="${build.dir}/classes/"/>
+    <property name="dist.dir"    value="${build.dir}/dist/"/>
+    <property name="main.class"  value="SqrtDecompositionGUI"/>
+
+    <!-- Очистка предыдущих сборок -->
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <!-- Создание необходимых директорий -->
+    <target name="init">
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+    </target>
+
+    <!-- Компиляция исходного кода -->
+    <target name="compile" depends="init">
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" includeantruntime="false" source="1.8" target="1.8" encoding="UTF-8"/>
+    </target>
+
+    <!-- Создание JAR-файла -->
+    <target name="jar" depends="compile">
+        <jar destfile="${dist.dir}/SqrtDecompositionProject.jar" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${main.class}"/>
+                <attribute name="Class-Path" value=""/>
+            </manifest>
+        </jar>
+    </target>
+
+</project>
